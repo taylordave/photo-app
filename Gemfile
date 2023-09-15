@@ -6,6 +6,10 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8"
 
+# Add the Devise gem and Bootstrap views
+gem "devise"
+gem "devise-bootstrap-views"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -38,6 +42,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+
+# Add Bootstrap 5
+gem "bootstrap", "~> 5.2.2"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
