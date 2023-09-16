@@ -1,2 +1,60 @@
-<h1>Welcome to the Photo App</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% if current_user %>
+  <h3>Welcome: <%= current_user.email %></h3>
+<% else %>
+  <div class="container-fluid p-5">
+    <div class="mb-4 bg-light round-3">
+      <div class="container-fluid py-5 text-center" id="jumbo-home">
+        <h2 class="display-4 fw-bold">Welcome to the Photo Management App!</h2>
+        <p class="lead">You'll love managing your Photos with our application. Sign up!</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center pb-5">
+    <div class="col-auto">
+      <div class="card">
+        <div class="card-header text-center">
+          Premium Plan
+        </div>
+        <div class="card-body text-left">
+          <div class="features">
+            <ul>
+              <li>Unlimited Image Uploads</li>
+              <li>Responsive design</li>
+              <li>Access anywhere</li>
+            </ul>
+            <hr>
+            <div class="price text-center pb-3">
+              Price: $10
+            </div>
+          </div>
+          <div class="card-footer text-center">
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto">
+      <div class="card">
+        <div class="card-header text-center">
+          Amaze Plan
+        </div>
+        <div class="card-body">
+          <div class="features">
+            <ul>
+              <li>Unlimited Image Uploads</li>
+              <li>Responsive design</li>
+              <li>Access anywhere</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="price text-center pb-3">
+            Price: $20
+          </div>
+          <div class="card-footer text-center">
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

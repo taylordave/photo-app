@@ -14,11 +14,12 @@
   <%= render 'layouts/navigation' %>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-9">
+      <div class="container">
         <%= render 'layouts/messages' %>
         <%= yield %>
       </div>
     </div>
   </div>
+  <footer class="text-center">&copy; Happy Snaps <%= Date.today.year.to_s %></footer>
 </body>
 </html>
