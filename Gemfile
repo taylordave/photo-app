@@ -49,6 +49,9 @@ gem "bootstrap", "~> 5.2.2"
 # Add Font Awesome
 gem "font-awesome-sass", "~> 6.1"
 
+# Add Stripe gem for payment
+gem 'stripe'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
