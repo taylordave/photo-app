@@ -45,12 +45,19 @@ gem "bootsnap", require: false
 
 # Add Bootstrap 5
 gem "bootstrap", "~> 5.2.2"
+gem 'twitter-bootstrap-rails', '~> 5.0'
 
 # Add Font Awesome
 gem "font-awesome-sass", "~> 6.1"
 
 # Add Stripe gem for payment
 gem 'stripe'
+
+# Add gems for Image handling feature
+gem "carrierwave"
+gem "mini_magick"
+gem "fog-aws"
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"
