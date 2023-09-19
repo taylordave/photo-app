@@ -4,3 +4,4 @@
 
 import "@hotwired/turbo-rails"
 import "controllers"
+import "./credit_card_form"

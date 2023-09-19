@@ -81,4 +81,6 @@ Rails.application.configure do
   #   tls: true,
   #   enable_starttls_auto: true
   # }
+
+  config.action_view.preload_links_header = false
 end

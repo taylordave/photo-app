@@ -1,9 +1,11 @@
-$(document).on('ready turbolinks:load', function () {
+import "jquery"
 
-    var show_error, stripeResponseHandler, submitHandler;
+$(document).on('ready turbo:load', function () {
+
+    let show_error, stripeResponseHandler, submitHandler;
 
     submitHandler = function (event) {
-        var $form = $(event.target);
+        let $form = $(event.target);
         $form.find("input[type=submit]").prop("disabled", true);
 
         // If Stripe was initialized correctly this will create a token using the credit card info
@@ -18,7 +20,7 @@ $(document).on('ready turbolinks:load', function () {
     $(".cc_form").on('submit', submitHandler);
 
     stripeResponseHandler = function (status, response) {
-        var token, $form;
+        let token, $form;
         $form = $('.cc_form');
         if (response.error) {
             console.log(response.error.message);
@@ -38,10 +40,11 @@ $(document).on('ready turbolinks:load', function () {
     };
 
     show_error = function (message) {
-        if ($("#flash-messages").size() < 1) {
+        let messages = $("#flash-messages")
+        if (messages.size < 1) {
             $('div.container.main div:first').prepend("<div id='flash-messages'></div>")
         }
-        $("#flash-messages").html('<div class="alert alert-warning"><a class="close" data-dismiss="alert">×</a><div id="flash_alert">' + message + '</div></div>');
+        messages.html('<div class="alert alert-warning"><a class="close" data-dismiss="alert">×</a><div id="flash_alert">' + message + '</div></div>');
         $('.alert').delay(5000).fadeOut(3000);
         return false;
     };
